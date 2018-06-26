@@ -12,45 +12,61 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HeaderView" customModule="HeaderView" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="400" height="120"/>
+            <rect key="frame" x="0.0" y="0.0" width="400" height="96"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1f-7U-nHa">
+                    <rect key="frame" x="32" y="13" width="336" height="24.5"/>
+                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aNk-FN-M1l">
-                    <rect key="frame" x="139.5" y="17.5" width="121" height="85"/>
+                    <rect key="frame" x="32" y="37.5" width="336" height="50.5"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1f-7U-nHa">
-                            <rect key="frame" x="39.5" y="0.0" width="42" height="20.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osU-Ca-w5I">
-                            <rect key="frame" x="39.5" y="28.5" width="42" height="20.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SubTitle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osU-Ca-w5I">
+                            <rect key="frame" x="0.0" y="0.0" width="336" height="14.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QEk-Yq-oeH">
-                            <rect key="frame" x="0.0" y="57" width="121" height="29"/>
+                            <rect key="frame" x="0.0" y="22.5" width="336" height="29"/>
                             <segments>
                                 <segment title="First"/>
                                 <segment title="Second"/>
                             </segments>
+                            <color key="tintColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="segmentedControlValueChangedActionEvent:" destination="iN0-l3-epB" eventType="valueChanged" id="wuZ-d7-ONO"/>
+                            </connections>
                         </segmentedControl>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="osU-Ca-w5I" firstAttribute="leading" secondItem="aNk-FN-M1l" secondAttribute="leading" id="8HC-0l-88B"/>
+                        <constraint firstAttribute="trailing" secondItem="QEk-Yq-oeH" secondAttribute="trailing" id="9VJ-x7-PyV"/>
+                        <constraint firstItem="QEk-Yq-oeH" firstAttribute="leading" secondItem="aNk-FN-M1l" secondAttribute="leading" id="CCp-fg-2P8"/>
+                        <constraint firstAttribute="trailing" secondItem="osU-Ca-w5I" secondAttribute="trailing" id="Goe-Ul-48q"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="aNk-FN-M1l" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="FA1-8l-f9L"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="aNk-FN-M1l" secondAttribute="trailing" constant="32" id="4CH-R7-2cq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="l1f-7U-nHa" secondAttribute="trailing" constant="32" id="C78-rx-F02"/>
+                <constraint firstItem="l1f-7U-nHa" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="DcL-n5-m9c"/>
                 <constraint firstItem="aNk-FN-M1l" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Yhp-9U-W6G"/>
+                <constraint firstItem="aNk-FN-M1l" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="jgF-dh-wxH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="aNk-FN-M1l" secondAttribute="bottom" constant="8" id="m8f-9D-tfa"/>
+                <constraint firstItem="l1f-7U-nHa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="pgT-pP-a5q"/>
+                <constraint firstItem="aNk-FN-M1l" firstAttribute="top" secondItem="l1f-7U-nHa" secondAttribute="bottom" id="uJ6-vE-TJz"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="headerLabel" destination="l1f-7U-nHa" id="8ne-w2-8dW"/>
                 <outlet property="segmentedControl" destination="QEk-Yq-oeH" id="asq-l6-jox"/>
-                <outlet property="subLabel" destination="osU-Ca-w5I" id="1ta-wr-sf4"/>
+                <outlet property="subTitleLabel" destination="osU-Ca-w5I" id="80e-Sl-3bm"/>
+                <outlet property="titleLabel" destination="l1f-7U-nHa" id="hAH-Ze-c08"/>
             </connections>
         </view>
     </objects>
